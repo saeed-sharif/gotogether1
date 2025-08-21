@@ -1,0 +1,51 @@
+[versions]
+agp = "8.2.2"  # Updated from 8.1.0
+kotlin = "1.9.22"  # Updated from 1.9.0
+navigation = "2.7.7"  # Keep this # Updated from 2.4.1 to match AGP 8.1.0 requirements
+
+
+#ads integration
+firebaseMessaging = "24.1.0"
+picasso = "2.71828"
+gson = "2.10.1"
+firebaseBom = "33.7.0"
+playServicesAds = "23.6.0"
+facebook = "6.18.0.0"
+
+audienceNetworkSdk = "6.18.0"
+firebaseCrashlyticsBuildtools = "3.0.2"
+googleIap = "1.7.0"
+userMessagingPlatform = "3.1.0"
+googleGmsGoogleServices = "4.4.2"
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.12.0" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.6.1" }
+material = { group = "com.google.android.material", name = "material", version = "1.9.0" }
+androidx-activity = { group = "androidx.activity", name = "activity-ktx", version = "1.7.2" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version = "2.1.4" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+junit = { group = "junit", name = "junit", version = "4.13.2" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version = "1.1.5" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version = "3.5.1" }
+circleindicator = { group = "me.relex", name = "circleindicator", version = "2.1.6" }
+
+#ads integration
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
+play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
+facebook = { module = "com.google.ads.mediation:facebook", version.ref = "facebook" }
+audience-network-sdk = { module = "com.facebook.android:audience-network-sdk", version.ref = "audienceNetworkSdk" }
+firebase-crashlytics-buildtools = { module = "com.google.firebase:firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
+google-iap = { module = "com.github.akshaaatt:Google-IAP", version.ref = "googleIap" }
+user-messaging-platform = { module = "com.google.android.ump:user-messaging-platform", version.ref = "userMessagingPlatform" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+navigation-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }

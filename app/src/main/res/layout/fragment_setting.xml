@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:padding="@dimen/_15sdp"
+
+    tools:context=".fragments.SettingFragment">
+
+    <LinearLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="9"
+            android:text="Setting"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topguidline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/share_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:background="@drawable/share_btn"
+        app:layout_constraintBottom_toTopOf="@+id/privacy_policy"
+        app:layout_constraintEnd_toEndOf="@id/appbar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/topguidline"
+        app:layout_constraintStart_toStartOf="@id/appbar"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/privacy_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/privacy_policy_btn"
+        app:layout_constraintBottom_toTopOf="@+id/rate_us"
+        app:layout_constraintEnd_toEndOf="@id/share_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/share_btn"
+        app:layout_constraintTop_toBottomOf="@+id/share_btn"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rate_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rate_us_btn"
+        app:layout_constraintEnd_toEndOf="@id/privacy_policy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/privacy_policy"
+        app:layout_constraintTop_toBottomOf="@+id/privacy_policy"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guidline"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guidline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
